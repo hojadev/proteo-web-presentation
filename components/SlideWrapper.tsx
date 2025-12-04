@@ -12,7 +12,8 @@ export default function SlideWrapper({ children, className, id }: SlideWrapperPr
         <section
             id={id}
             className={cn(
-                "h-full w-full flex flex-col justify-center items-center px-8 md:px-20 lg:px-32 py-16 relative",
+                "w-full flex flex-col justify-center items-center px-8 md:px-20 lg:px-32 py-16 relative",
+                "min-h-[100dvh] md:h-[100dvh]",
                 className
             )}
         >
@@ -22,7 +23,7 @@ export default function SlideWrapper({ children, className, id }: SlideWrapperPr
                 <div className="absolute bottom-0 left-0 w-80 h-80 bg-proteo-orange/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
             </div>
 
-            <div className="w-full max-w-[1400px] mx-auto h-full flex flex-col justify-center relative z-10">
+            <div className="w-full max-w-[1400px] mx-auto flex flex-col justify-center relative z-10">
                 {children}
             </div>
         </section>
