@@ -6,11 +6,13 @@ import SlideTechAdvantage from "@/components/slides/SlideTechAdvantage";
 import SlideNitroxResponse from "@/components/slides/SlideNitroxResponse";
 import SlideReporting from "@/components/slides/SlideReporting";
 import SlideFinalInteractive from "@/components/slides/SlideFinalInteractive";
+import SlideContext from "@/components/slides/SlideContext";
 
 export default function Home() {
   return (
     <main>
       <SlideContainer>
+        <SlideContext />
         <SlideHero />
         <SlideExperience />
         <SlidePillars />
