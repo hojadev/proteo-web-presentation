@@ -37,13 +37,13 @@ export default function SlideRiskMitigation() {
     return (
         <SlideWrapper className="bg-gradient-to-br from-slate-900 via-proteo-blue to-slate-900 text-white">
             <div className="w-full max-w-6xl mx-auto">
-                <div className="text-center mb-8 md:mb-12">
+                <div className="text-center mb-4 md:mb-6">
                     <div className="flex items-center justify-center gap-3 mb-6">
                         <div className="w-16 h-1 bg-proteo-orange" />
                         <span className="text-xs uppercase tracking-[0.3em] text-proteo-orange font-bold">KPI de Eficiencia Hídrica</span>
                         <div className="w-16 h-1 bg-proteo-orange" />
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                    <h2 className="text-xl md:text-3xl font-bold mb-2">
                         Mitigación de Riesgo Ambiental
                     </h2>
                     <p className="text-slate-300 text-lg max-w-3xl mx-auto">
@@ -52,8 +52,8 @@ export default function SlideRiskMitigation() {
                 </div>
 
                 {/* Contract Cost Input */}
-                <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8 max-w-md mx-auto">
-                    <label className="block text-sm font-bold mb-3">
+                <div className="bg-white/10 backdrop-blur-md p-3 rounded-2xl border border-white/20 mb-4 max-w-md mx-auto">
+                    <label className="block text-sm font-bold mb-1">
                         Costo Anual del Contrato PM (CLP)
                     </label>
                     <input
@@ -69,7 +69,7 @@ export default function SlideRiskMitigation() {
                 {/* Chart */}
                 <div className="bg-white/10 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-white/20 mb-8">
                     <h3 className="text-xl font-bold mb-6 text-center">Inversión vs. Riesgo Evitado</h3>
-                    <div className="h-96">
+                    <div className="h-64">
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart data={data}>
                                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
@@ -99,7 +99,7 @@ export default function SlideRiskMitigation() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="bg-gradient-to-br from-green-500 to-emerald-600 p-6 rounded-2xl"
+                        className="bg-gradient-to-br from-green-500 to-emerald-600 p-3 text-center rounded-2xl"
                     >
                         <div className="flex items-center gap-3 mb-3">
                             <Shield className="w-7 h-7" />
@@ -113,7 +113,7 @@ export default function SlideRiskMitigation() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="bg-gradient-to-br from-red-500 to-orange-600 p-6 rounded-2xl"
+                        className="bg-gradient-to-br from-red-500 to-orange-600 p-3 text-center rounded-2xl"
                     >
                         <div className="flex items-center gap-3 mb-3">
                             <AlertTriangle className="w-7 h-7" />
@@ -127,7 +127,7 @@ export default function SlideRiskMitigation() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
-                        className="bg-gradient-to-br from-blue-500 to-cyan-600 p-6 rounded-2xl"
+                        className="bg-gradient-to-br from-blue-500 to-cyan-600 p-3 text-center rounded-2xl"
                     >
                         <div className="flex items-center gap-3 mb-3">
                             <TrendingDown className="w-7 h-7" />
@@ -139,7 +139,7 @@ export default function SlideRiskMitigation() {
                 </div>
 
                 {/* Bottom Info */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mt-8">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-2 mt-8">
                     <p className="text-center text-lg font-bold mb-3">
                         La inversión en PM es una <span className="text-proteo-orange">póliza de seguro operacional</span>
                     </p>
