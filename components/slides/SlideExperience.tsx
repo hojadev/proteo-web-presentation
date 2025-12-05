@@ -3,7 +3,7 @@
 import React from "react";
 import SlideWrapper from "../SlideWrapper";
 import { motion } from "framer-motion";
-import { ShieldCheck, Award, Users, TrendingDown } from "lucide-react";
+import { ShieldCheck, Award, Shield, Wind } from "lucide-react";
 
 export default function SlideExperience() {
     return (
@@ -62,10 +62,10 @@ export default function SlideExperience() {
                     >
                         <div className="flex items-center gap-3 mb-3">
                             <Award className="w-6 md:w-7 h-6 md:h-7 text-proteo-blue group-hover:scale-110 transition-transform" />
-                            <h3 className="font-bold text-slate-800 text-base md:text-lg">Cumplimiento ISO</h3>
+                            <h3 className="font-bold text-slate-800 text-base md:text-lg">Mejora Continua</h3>
                         </div>
                         <p className="text-sm text-slate-600 leading-relaxed">
-                            Estándares internacionales que permiten una <strong className="text-proteo-blue">prospección a largo plazo</strong>. Somos su socio estratégico en gestión de riesgos.
+                            En proceso de certificacion  <strong className="text-proteo-blue">ISO 9001, 14001 y 45001</strong>. Nuestro objetivo es mejorar continuamente nuestros procesos y cumplir con los estándares más altos de calidad y seguridad.
                         </p>
                     </motion.div>
 
@@ -76,26 +76,26 @@ export default function SlideExperience() {
                         transition={{ duration: 0.5, delay: 0.3 }}
                     >
                         <div className="flex items-center gap-3 mb-3">
-                            <Users className="w-6 md:w-7 h-6 md:h-7 text-proteo-orange group-hover:scale-110 transition-transform" />
-                            <h3 className="font-bold text-slate-800 text-base md:text-lg">Foco en Colaboradores</h3>
+                            <Shield className="w-6 md:w-7 h-6 md:h-7 text-proteo-orange group-hover:scale-110 transition-transform" />
+                            <h3 className="font-bold text-slate-800 text-base md:text-lg">Bienestar del Equipo</h3>
                         </div>
                         <p className="text-sm text-slate-600 leading-relaxed">
-                            Una organización centrada en las personas. Un equipo cuidado y capacitado es un activo operativo sin fallas.
+                            Priorizamos la <strong className="text-proteo-orange">seguridad y salud</strong> de nuestros buzos. Un equipo protegido y cuidado es sinónimo de operaciones sin fallas.
                         </p>
                     </motion.div>
 
                     <motion.div
-                        className="bg-slate-50 p-5 md:p-6 rounded-xl border-l-4 border-green-500 hover:shadow-lg transition-all group"
+                        className="bg-slate-50 p-5 md:p-6 rounded-xl border-l-4 border-cyan-500 hover:shadow-lg transition-all group"
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
                     >
                         <div className="flex items-center gap-3 mb-3">
-                            <TrendingDown className="w-6 md:w-7 h-6 md:h-7 text-green-500 group-hover:scale-110 transition-transform" />
-                            <h3 className="font-bold text-slate-800 text-base md:text-lg">Eficiencia de Costos</h3>
+                            <Wind className="w-6 md:w-7 h-6 md:h-7 text-cyan-500 group-hover:scale-110 transition-transform" />
+                            <h3 className="font-bold text-slate-800 text-base md:text-lg">Tecnología Avanzada</h3>
                         </div>
                         <p className="text-sm text-slate-600 leading-relaxed">
-                            Menor siniestralidad = Menores costos en mutuales. La seguridad paga su propia inversión.
+                            <strong className="text-cyan-600">Bancos de Aire y Nitrox</strong> para máxima seguridad y eficiencia. Eliminamos riesgos de CO y extendemos tiempo de fondo.
                         </p>
                     </motion.div>
                 </div>

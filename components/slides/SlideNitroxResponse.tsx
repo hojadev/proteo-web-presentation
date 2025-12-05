@@ -1,118 +1,142 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SlideWrapper from "../SlideWrapper";
-import { motion } from "framer-motion";
-import { Zap, Clock, TrendingUp } from "lucide-react";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
+import { motion, AnimatePresence } from "framer-motion";
+import { Clock, Zap, Heart, TrendingUp, ChevronLeft, ChevronRight } from "lucide-react";
 
-const data = [
-    { name: "Outsourcing Reactivo", time: 24, color: "#94a3b8" },
-    { name: "Proteo (Preventivo)", time: 4, color: "#f97316" },
+const advantages = [
+    {
+        icon: Clock,
+        title: "Mayor Tiempo de Fondo",
+        description: "Menor contenido de nitrógeno permite prolongar inmersiones sin aumentar riesgo de descompresión. Más tiempo productivo en cada inmersión.",
+        color: "from-blue-500 to-cyan-500"
+    },
+    {
+        icon: Zap,
+        title: "Ciclo de Buceo Acelerado",
+        description: "Menor carga de nitrógeno reduce el tiempo de espera entre inmersiones. Nuestro equipo puede realizar la siguiente inmersión más rápido.",
+        color: "from-orange-500 to-yellow-500"
+    },
+    {
+        icon: Heart,
+        title: "Menor Fatiga",
+        description: "Reducción de fatiga durante y después de inmersiones. Mejor recuperación cuando se requieren múltiples inmersiones en un día.",
+        color: "from-red-500 to-pink-500"
+    },
+    {
+        icon: TrendingUp,
+        title: "Mayor Concentración",
+        description: "Menor fatiga mantiene la concentración del buzo. Calidad constante en tareas complejas durante jornadas largas.",
+        color: "from-purple-500 to-indigo-500"
+    }
 ];
 
 export default function SlideNitroxResponse() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const nextCard = () => {
+        setCurrentIndex((prev) => (prev + 1) % advantages.length);
+    };
+
+    const prevCard = () => {
+        setCurrentIndex((prev) => (prev - 1 + advantages.length) % advantages.length);
+    };
+
+    const currentCard = advantages[currentIndex];
+
     return (
-        <SlideWrapper className="bg-white relative">
-            {/* Decorative Circles */}
-            <div className="absolute top-10 left-10 w-32 h-32 border-2 border-proteo-blue/10 rounded-full pointer-events-none" />
-            <div className="absolute bottom-10 right-10 w-40 h-40 border-2 border-proteo-orange/10 rounded-full pointer-events-none" />
-            <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-proteo-accent/5 rounded-full blur-2xl pointer-events-none" />
+        <SlideWrapper className="bg-gradient-to-br from-slate-50 to-cyan-50">
+            <div className="w-full max-w-5xl mx-auto">
+                {/* Header with Optional Badge */}
+                <div className="text-center mb-10 md:mb-12">
+                    <motion.div
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full text-sm font-bold mb-6 shadow-lg"
+                    >
+                        SERVICIO OPCIONAL
+                    </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full max-w-6xl relative z-10">
-                {/* Nitrox Section */}
-                <motion.div
-                    className="bg-gradient-to-br from-blue-50 to-cyan-50 p-10 rounded-3xl shadow-xl border-2 border-blue-100 flex flex-col justify-center relative overflow-hidden"
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
-                >
-                    <div className="absolute -top-16 -right-16 w-48 h-48 bg-blue-100/30 rounded-full" />
-
-                    <div className="flex items-center gap-4 mb-8 relative z-10">
-                        <div className="bg-white p-4 rounded-xl shadow-md">
-                            <Zap className="w-10 h-10 text-proteo-accent" />
-                        </div>
-                        <div>
-                            <h3 className="text-3xl font-bold text-slate-800">El Factor Nitrox</h3>
-                            <span className="text-sm text-proteo-orange bg-orange-100 px-3 py-1 rounded-full font-bold">OPCIONAL</span>
-                        </div>
-                    </div>
-
-                    <p className="text-slate-700 leading-relaxed mb-8 text-lg relative z-10">
-                        El uso de Nitrox extiende el <strong className="text-proteo-blue">Límite Sin Descompresión (LND)</strong>, permitiendo más tiempo efectivo de fondo para inspecciones detalladas.
+                    <h2 className="text-3xl md:text-5xl font-bold text-proteo-blue mb-4">
+                        Nitrox (EANx 32-36%)
+                    </h2>
+                    <p className="text-slate-600 text-lg max-w-3xl mx-auto">
+                        Aire enriquecido que optimiza el rendimiento del equipo de buceo
                     </p>
+                </div>
 
-                    <div className="space-y-4 relative z-10">
-                        <div className="bg-white p-5 rounded-xl border-l-4 border-proteo-accent shadow-sm">
-                            <div className="flex items-center justify-between mb-2">
-                                <span className="text-sm font-bold text-slate-600">Tiempo de Fondo</span>
-                                <TrendingUp className="w-5 h-5 text-green-500" />
+                {/* Carousel Container */}
+                <div className="relative">
+                    {/* Main Card */}
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={currentIndex}
+                            initial={{ opacity: 0, scale: 0.8, rotateY: -90 }}
+                            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+                            exit={{ opacity: 0, scale: 0.8, rotateY: 90 }}
+                            transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
+                            className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 mx-auto max-w-2xl"
+                        >
+                            <div className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br ${currentCard.color} flex items-center justify-center mx-auto mb-6 shadow-lg`}>
+                                <currentCard.icon className="w-10 h-10 md:w-12 md:h-12 text-white" />
                             </div>
-                            <p className="text-2xl font-bold text-proteo-blue">+40% Mayor</p>
-                            <p className="text-xs text-slate-500 mt-1">vs. Aire Convencional</p>
-                        </div>
 
-                        <div className="bg-white p-5 rounded-xl border-l-4 border-green-500 shadow-sm">
-                            <div className="flex items-center justify-between mb-2">
-                                <span className="text-sm font-bold text-slate-600">Fatiga del Buzo</span>
-                                <TrendingUp className="w-5 h-5 text-green-500" />
-                            </div>
-                            <p className="text-2xl font-bold text-green-600">-30% Reducción</p>
-                            <p className="text-xs text-slate-500 mt-1">Mayor precisión técnica</p>
-                        </div>
-                    </div>
+                            <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4 text-center">
+                                {currentCard.title}
+                            </h3>
 
-                    <div className="bg-slate-800 p-5 rounded-xl mt-6 relative z-10">
-                        <p className="text-sm font-medium text-slate-200 italic">
-                            "Menor fatiga = Mayor precisión técnica = <span className="text-proteo-orange font-bold">Aumento del MTBF</span> de sus activos."
-                        </p>
-                    </div>
-                </motion.div>
+                            <p className="text-slate-600 text-center leading-relaxed text-lg">
+                                {currentCard.description}
+                            </p>
+                        </motion.div>
+                    </AnimatePresence>
 
-                {/* Response Time Chart */}
+                    {/* Navigation Buttons */}
+                    <button
+                        onClick={prevCard}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-white rounded-full p-3 shadow-lg hover:bg-slate-100 transition-all group"
+                        aria-label="Previous"
+                    >
+                        <ChevronLeft className="w-6 h-6 text-slate-600 group-hover:text-proteo-blue" />
+                    </button>
+
+                    <button
+                        onClick={nextCard}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-white rounded-full p-3 shadow-lg hover:bg-slate-100 transition-all group"
+                        aria-label="Next"
+                    >
+                        <ChevronRight className="w-6 h-6 text-slate-600 group-hover:text-proteo-blue" />
+                    </button>
+                </div>
+
+                {/* Dots Indicator */}
+                <div className="flex justify-center gap-2 mt-8">
+                    {advantages.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setCurrentIndex(index)}
+                            className={`w-3 h-3 rounded-full transition-all ${index === currentIndex
+                                    ? 'bg-proteo-blue w-8'
+                                    : 'bg-slate-300 hover:bg-slate-400'
+                                }`}
+                            aria-label={`Go to card ${index + 1}`}
+                        />
+                    ))}
+                </div>
+
+                {/* Bottom Summary */}
                 <motion.div
-                    className="bg-gradient-to-br from-slate-50 to-slate-100 p-10 rounded-3xl shadow-xl border-2 border-slate-200 relative overflow-hidden"
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5, duration: 0.6 }}
+                    className="mt-10 bg-slate-800 p-6 md:p-8 rounded-2xl text-white text-center"
                 >
-                    <div className="absolute -bottom-16 -left-16 w-48 h-48 bg-orange-100/30 rounded-full" />
-
-                    <div className="flex items-center gap-4 mb-8 relative z-10">
-                        <div className="bg-white p-4 rounded-xl shadow-md">
-                            <Clock className="w-10 h-10 text-proteo-orange" />
-                        </div>
-                        <div>
-                            <h3 className="text-3xl font-bold text-slate-800">Tiempo de Respuesta</h3>
-                            <p className="text-sm text-slate-500">Horas promedio ante incidentes críticos</p>
-                        </div>
-                    </div>
-
-                    <div className="h-72 w-full mb-6 relative z-10">
-                        <ResponsiveContainer width="100%" height="100%">
-                            <BarChart data={data} layout="vertical" margin={{ top: 5, right: 30, left: 40, bottom: 5 }}>
-                                <XAxis type="number" hide />
-                                <YAxis dataKey="name" type="category" width={180} tick={{ fontSize: 13, fill: '#64748B', fontWeight: 600 }} />
-                                <Tooltip
-                                    cursor={{ fill: 'transparent' }}
-                                    contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', padding: '12px' }}
-                                    formatter={(value: number) => [`${value} horas`, "Tiempo"]}
-                                />
-                                <Bar dataKey="time" radius={[0, 12, 12, 0]} barSize={50}>
-                                    {data.map((entry, index) => (
-                                        <Cell key={`cell-${index}`} fill={entry.color} />
-                                    ))}
-                                </Bar>
-                            </BarChart>
-                        </ResponsiveContainer>
-                    </div>
-
-                    <div className="bg-proteo-orange/10 p-5 rounded-xl border-l-4 border-proteo-orange relative z-10">
-                        <p className="text-sm font-bold text-slate-800 mb-2">Ventaja Competitiva</p>
-                        <p className="text-2xl font-bold text-proteo-orange">6x Más Rápido</p>
-                        <p className="text-xs text-slate-600 mt-2">*Tiempo estimado basado en disponibilidad inmediata vs coordinación externa.</p>
-                    </div>
+                    <p className="text-lg leading-relaxed max-w-3xl mx-auto">
+                        Nitrox permite completar tareas complejas con mayor eficiencia y menor fatiga,
+                        disponible según los requerimientos específicos de cada proyecto.
+                    </p>
                 </motion.div>
             </div>
         </SlideWrapper>

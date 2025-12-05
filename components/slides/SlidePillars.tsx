@@ -72,7 +72,7 @@ export default function SlidePillars() {
                 >
                     Pilares de Servicio
                 </motion.h2>
-                <p className="text-slate-400 text-lg">La base de nuestra excelencia operativa</p>
+                <p className="text-slate-300 text-lg">La base de nuestra excelencia operativa</p>
             </div>
 
             <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 md:gap-8 w-full relative z-10">
@@ -91,14 +91,14 @@ export default function SlidePillars() {
                         </div>
 
                         <h3 className="text-xl md:text-2xl font-bold mb-2 group-hover:text-proteo-orange transition-colors">{pilar.title}</h3>
-                        <h4 className="text-sm md:text-base text-blue-300 mb-3 md:mb-4 font-medium">{pilar.subtitle}</h4>
-                        <p className="text-slate-400 text-xs md:text-sm mb-4 md:mb-6 leading-relaxed">{pilar.description}</p>
+                        <h4 className="text-sm md:text-base text-cyan-300 mb-3 md:mb-4 font-medium">{pilar.subtitle}</h4>
+                        <p className="text-slate-200 text-xs md:text-sm mb-4 md:mb-6 leading-relaxed">{pilar.description}</p>
 
                         {/* Metrics */}
                         <div className="mt-auto w-full space-y-2 md:space-y-3 pt-4 md:pt-6 border-t border-slate-700/50">
                             {pilar.metrics.map((metric, idx) => (
                                 <div key={idx} className="flex justify-between items-center text-xs md:text-sm">
-                                    <span className="text-slate-500">{metric.label}</span>
+                                    <span className="text-slate-300">{metric.label}</span>
                                     <span className="text-white font-bold">{metric.value}</span>
                                 </div>
                             ))}

@@ -48,9 +48,9 @@ export default function DesktopSlideContainer({ children }: DesktopSlideContaine
     }, [currentSlide, totalSlides]);
 
     return (
-        <div className="h-screen w-full overflow-hidden relative" ref={containerRef}>
+        <div className="h-[100dvh] w-[100dvw] overflow-hidden relative" ref={containerRef}>
             <motion.div
-                className="h-full w-full"
+                className="h-[100dvh] w-[100dvw]"
                 initial={false}
                 animate={{ y: `-${currentSlide * 100}%` }}
                 transition={{
@@ -64,12 +64,12 @@ export default function DesktopSlideContainer({ children }: DesktopSlideContaine
                 {React.Children.map(children, (child, index) => (
                     <motion.div
                         key={index}
-                        className="h-screen w-full relative"
-                        initial={{ opacity: 0.3, scale: 0.95 }}
+                        className="h-[100dvh] w-[100dvw] relative"
+                        initial={{ opacity: 0.5, scale: 0.98 }}
                         animate={{
-                            opacity: currentSlide === index ? 1 : 0.3,
-                            scale: currentSlide === index ? 1 : 0.95,
-                            filter: currentSlide === index ? "blur(0px)" : "blur(2px)"
+                            opacity: currentSlide === index ? 1 : 0.5,
+                            scale: currentSlide === index ? 1 : 0.98,
+                            filter: currentSlide === index ? "blur(0px)" : "blur(0.5px)"
                         }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
                     >
@@ -85,8 +85,8 @@ export default function DesktopSlideContainer({ children }: DesktopSlideContaine
                         key={idx}
                         onClick={() => setCurrentSlide(idx)}
                         className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === idx
-                                ? "bg-proteo-orange scale-125"
-                                : "bg-proteo-muted/30 hover:bg-proteo-muted/60"
+                            ? "bg-proteo-orange scale-125"
+                            : "bg-proteo-muted/30 hover:bg-proteo-muted/60"
                             }`}
                         aria-label={`Go to slide ${idx + 1}`}
                     />

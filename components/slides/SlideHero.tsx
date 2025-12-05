@@ -47,7 +47,7 @@ export default function SlideHero() {
             </div>
 
             <motion.div
-                className="absolute bottom-12 md:bottom-16 left-1/2 transform -translate-x-1/2 text-slate-400 flex flex-col items-center gap-2 md:gap-3"
+                className="absolute bottom-8 md:bottom-10 left-1/2 transform -translate-x-1/2 text-slate-400 flex flex-col items-center gap-2 md:gap-3"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, y: [0, 10, 0] }}
                 transition={{ delay: 1, duration: 2, repeat: Infinity }}
