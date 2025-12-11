@@ -33,9 +33,22 @@ export default function SlideExperience() {
                         Un equipo experto con foco en el colaborador. Nuestra operación se traduce en seguridad financiera y continuidad para Agrosuper.
                     </p>
 
-                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 md:p-8 rounded-2xl shadow-lg border-l-4 border-green-500 relative overflow-hidden">
-                        {/* Decorative Circle */}
-                        <div className="absolute -top-10 -right-10 w-24 md:w-32 h-24 md:h-32 bg-green-100/50 rounded-full" />
+                    <div className="bg-gradient-to-br from-green-50 via-emerald-50 to-green-50 p-6 md:p-8 rounded-2xl shadow-lg border-l-4 border-green-500 relative overflow-hidden">
+                        {/* Decorative background elements */}
+                        <div className="absolute inset-0 opacity-10">
+                            <div className="absolute -top-10 -right-10 w-32 h-32 bg-green-400 rounded-full blur-3xl" />
+                            <div className="absolute bottom-0 left-0 w-40 h-40 bg-emerald-300 rounded-full blur-3xl" />
+                        </div>
+
+                        {/* Subtle checkmark pattern */}
+                        <div className="absolute inset-0 opacity-5">
+                            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                                <pattern id="checks" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                                    <path d="M10 20 L15 25 L25 15" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-green-600" />
+                                </pattern>
+                                <rect width="100%" height="100%" fill="url(#checks)" />
+                            </svg>
+                        </div>
 
                         <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 relative z-10">
                             <div className="bg-white p-3 md:p-4 rounded-xl shadow-md">

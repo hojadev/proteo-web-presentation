@@ -7,8 +7,41 @@ import { FileText, Calendar, TrendingUp, Shield } from "lucide-react";
 
 export default function SlideReporting() {
     return (
-        <SlideWrapper className="bg-gradient-to-br from-slate-50 to-blue-50">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full max-w-6xl mx-auto">
+        <SlideWrapper className="bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+            {/* Subtle water-themed background */}
+            <div className="absolute inset-0 opacity-15 pointer-events-none">
+                {/* Wavy lines */}
+                <svg className="absolute bottom-0 w-full h-64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="currentColor" className="text-cyan-300" fillOpacity="0.3" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,128C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                    <path fill="currentColor" className="text-blue-200" fillOpacity="0.2" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+
+                {/* Rising bubbles animation */}
+
+
+                {/* Multiple bubbles */}
+                <div className="bubble" style={{ left: '5%', width: '8px', height: '8px', animationDuration: '8s', animationDelay: '0s' }} />
+                <div className="bubble" style={{ left: '15%', width: '12px', height: '12px', animationDuration: '10s', animationDelay: '2s' }} />
+                <div className="bubble" style={{ left: '25%', width: '6px', height: '6px', animationDuration: '7s', animationDelay: '1s' }} />
+                <div className="bubble" style={{ left: '35%', width: '10px', height: '10px', animationDuration: '9s', animationDelay: '3s' }} />
+                <div className="bubble" style={{ left: '45%', width: '7px', height: '7px', animationDuration: '8.5s', animationDelay: '0.5s' }} />
+                <div className="bubble" style={{ left: '55%', width: '11px', height: '11px', animationDuration: '11s', animationDelay: '4s' }} />
+                <div className="bubble" style={{ left: '65%', width: '9px', height: '9px', animationDuration: '9.5s', animationDelay: '1.5s' }} />
+                <div className="bubble" style={{ left: '75%', width: '8px', height: '8px', animationDuration: '8s', animationDelay: '2.5s' }} />
+                <div className="bubble" style={{ left: '85%', width: '13px', height: '13px', animationDuration: '12s', animationDelay: '3.5s' }} />
+                <div className="bubble" style={{ left: '95%', width: '7px', height: '7px', animationDuration: '7.5s', animationDelay: '0.8s' }} />
+                <div className="bubble" style={{ left: '10%', width: '5px', height: '5px', animationDuration: '6s', animationDelay: '4.5s' }} />
+                <div className="bubble" style={{ left: '20%', width: '9px', height: '9px', animationDuration: '9s', animationDelay: '5s' }} />
+                <div className="bubble" style={{ left: '30%', width: '11px', height: '11px', animationDuration: '10.5s', animationDelay: '1.2s' }} />
+                <div className="bubble" style={{ left: '40%', width: '6px', height: '6px', animationDuration: '7s', animationDelay: '3.8s' }} />
+                <div className="bubble" style={{ left: '50%', width: '10px', height: '10px', animationDuration: '9.5s', animationDelay: '2.2s' }} />
+                <div className="bubble" style={{ left: '60%', width: '8px', height: '8px', animationDuration: '8.5s', animationDelay: '4.2s' }} />
+                <div className="bubble" style={{ left: '70%', width: '12px', height: '12px', animationDuration: '11s', animationDelay: '0.3s' }} />
+                <div className="bubble" style={{ left: '80%', width: '7px', height: '7px', animationDuration: '7.5s', animationDelay: '5.5s' }} />
+                <div className="bubble" style={{ left: '90%', width: '9px', height: '9px', animationDuration: '9s', animationDelay: '1.8s' }} />
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full max-w-6xl mx-auto relative z-10">
 
                 {/* Left: Content */}
                 <motion.div

@@ -33,7 +33,7 @@ const pillars = [
         description: "Protocolos rigurosos que protegen al colaborador.",
         metrics: [
             { label: "Tasa Accidentes", value: "0%" },
-            { label: "Cumplimiento", value: "ISO 45001" }
+            { label: "En Proceso", value: "ISO 45001" }
         ]
     },
 ];

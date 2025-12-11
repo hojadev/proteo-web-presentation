@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import SlideWrapper from "../SlideWrapper";
 import { motion } from "framer-motion";
-import { Calendar, AlertTriangle, TrendingUp, Shield } from "lucide-react";
+import { Calendar, AlertTriangle, TrendingUp, Shield, DollarSign, XCircle, Hammer, CloudOff } from "lucide-react";
 
 export default function SlidePreventiveValue() {
     const [activeTab, setActiveTab] = useState<"reactive" | "preventive">("reactive");
@@ -15,22 +15,22 @@ export default function SlidePreventiveValue() {
             color: "from-red-500 to-orange-500",
             aspects: [
                 {
-                    icon: AlertTriangle,
+                    icon: DollarSign,
                     label: "Costos",
                     description: "Reparaciones de emergencia con costos impredecibles. Paradas no planificadas afectan presupuestos."
                 },
                 {
-                    icon: AlertTriangle,
+                    icon: XCircle,
                     label: "Operación",
                     description: "Interrupciones inesperadas del tratamiento de Riles. Riesgo de incumplimiento ambiental."
                 },
                 {
-                    icon: AlertTriangle,
+                    icon: Hammer,
                     label: "Equipos",
                     description: "Desgaste acelerado por falta de mantenimiento. Vida útil reducida de activos críticos."
                 },
                 {
-                    icon: AlertTriangle,
+                    icon: CloudOff,
                     label: "Planificación",
                     description: "Imposible proyectar a largo plazo. Gestión reactiva sin control sobre el futuro."
                 }

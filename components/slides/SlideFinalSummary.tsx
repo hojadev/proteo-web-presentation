@@ -8,9 +8,9 @@ import { Shield, Wind, CheckCircle2, Clock, FileText, TrendingUp } from "lucide-
 const metrics = [
     { icon: Shield, label: "0% Accidentes", description: "Historial seguridad" },
     { icon: Wind, label: "Bancos de Aire", description: "Cero riesgo fallo" },
-    { icon: Clock, label: "4 horas", description: "Tiempo respuesta" },
+    { icon: Clock, label: "1 día", description: "Respuesta planificada" },
     { icon: FileText, label: "Informes", description: "Cada actividad" },
-    { icon: TrendingUp, label: "Descuentos", description: "Contratos 3+ años" },
+    { icon: TrendingUp, label: "Descuentos", description: "Segun plan seleccionado" },
     { icon: CheckCircle2, label: "ISO", description: "Certificaciones en proceso" },
 ];
 
@@ -98,7 +98,7 @@ export default function SlideFinalSummary() {
                     >
                         <h3 className="text-base font-bold text-white mb-3">Plan Preventivo</h3>
                         <ul className="space-y-2 text-sm text-slate-200">
-                            <li>• Respuesta 6x más rápida</li>
+                            <li>• Respuestas más rápida</li>
                             <li>• Descuentos multianuales</li>
                             <li>• Detección temprana</li>
                         </ul>

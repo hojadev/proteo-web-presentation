@@ -109,7 +109,7 @@ export default function SlideResponseTime() {
                             className="text-center lg:text-left"
                         >
                             <div className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
-                                PREVENTIVO
+                                PLANIFICADO
                             </div>
                         </motion.div>
 
@@ -154,10 +154,10 @@ export default function SlideResponseTime() {
                         >
                             <div className="flex items-center gap-3 mb-3">
                                 <Zap className="w-10 h-10 text-green-400" />
-                                <h3 className="text-2xl font-bold text-white">4 horas</h3>
+                                <h3 className="text-2xl font-bold text-white">1 día</h3>
                             </div>
                             <p className="text-sm text-slate-300">
-                                Tiempo promedio de respuesta
+                                Tiempo de respuesta tras notificación de falla.
                             </p>
                         </motion.div>
                     </div>
@@ -171,7 +171,7 @@ export default function SlideResponseTime() {
                     className="mt-10 bg-white/10 backdrop-blur-md border border-white/20 p-6 md:p-8 rounded-2xl text-center"
                 >
                     <h3 className="text-2xl font-bold text-proteo-orange mb-3">
-                        Respuesta 6x más rápida con mantenimiento preventivo
+                        Respuesta más rápida con mantenimiento planificado
                     </h3>
                     <p className="text-slate-200 leading-relaxed max-w-3xl mx-auto">
                         Con inspecciones programadas, Proteo detecta problemas antes de que se conviertan en fallas,

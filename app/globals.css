@@ -39,6 +39,34 @@ body {
 /* Desktop: prevent vertical scrolling for snap effect */
 @media (min-width: 768px) {
   body {
-    overflow-y: hidden;
+    overflow-y: auto;
   }
+}
+
+/* Bubble animation for water effect */
+@keyframes rise {
+  0% {
+    bottom: -10%;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    bottom: 110%;
+    opacity: 0;
+  }
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(34, 211, 238, 0.4));
+  animation: rise linear infinite;
 }
