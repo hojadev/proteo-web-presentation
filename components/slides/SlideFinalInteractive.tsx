@@ -142,35 +142,35 @@ export default function SlideFinalInteractive() {
         <SlideWrapper className="bg-gradient-to-br from-slate-900 via-slate-800 to-proteo-blue">
             <div className="w-full max-w-6xl mx-auto">
                 {/* Header */}
-                <div className="text-center mb-8">
-                    <div className="flex items-center justify-center gap-3 mb-4">
-                        <div className="w-12 h-1 bg-proteo-orange" />
-                        <span className="text-xs uppercase tracking-[0.3em] text-proteo-orange font-bold">
+                <div className="text-center mb-3 md:mb-5">
+                    <div className="flex items-center justify-center gap-2 mb-2 md:mb-3">
+                        <div className="w-8 h-1 bg-proteo-orange" />
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-proteo-orange font-bold">
                             {activeView === "daily" ? "Comparativa de Costos" : "Proyección de Ahorro"}
                         </span>
-                        <div className="w-12 h-1 bg-proteo-orange" />
+                        <div className="w-8 h-1 bg-proteo-orange" />
                     </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-3">
                         {activeView === "daily" ? "Comparativa Planes" : "Valor en el Tiempo"}
                     </h2>
 
                     {/* Main Toggle */}
-                    <div className="flex justify-center mb-6">
-                        <div className="bg-white/10 backdrop-blur-sm p-1.5 rounded-full flex relative shadow-inner border border-white/20">
+                    <div className="flex justify-center mb-3 md:mb-5">
+                        <div className="bg-white/10 backdrop-blur-sm p-1 rounded-full flex relative shadow-inner border border-white/20">
                             <motion.div
-                                className="absolute top-1.5 bottom-1.5 w-[calc(50%-6px)] rounded-full shadow-md z-0 bg-proteo-orange"
-                                animate={{ left: activeView === "daily" ? "6px" : "50%" }}
+                                className="absolute top-1 bottom-1 w-[calc(50%-4px)] rounded-full shadow-md z-0 bg-proteo-orange"
+                                animate={{ left: activeView === "daily" ? "4px" : "50%" }}
                                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
                             />
                             <button
                                 onClick={() => setActiveView("daily")}
-                                className={`relative z-10 px-6 py-2 rounded-full text-sm font-bold transition-colors w-40 ${activeView === "daily" ? "text-white" : "text-slate-300"}`}
+                                className={`relative z-10 px-4 py-1.5 rounded-full text-xs font-bold transition-colors w-32 ${activeView === "daily" ? "text-white" : "text-slate-300"}`}
                             >
                                 Valor Diario
                             </button>
                             <button
                                 onClick={() => setActiveView("projection")}
-                                className={`relative z-10 px-6 py-2 rounded-full text-sm font-bold transition-colors w-40 ${activeView === "projection" ? "text-white" : "text-slate-300"}`}
+                                className={`relative z-10 px-4 py-1.5 rounded-full text-xs font-bold transition-colors w-32 ${activeView === "projection" ? "text-white" : "text-slate-300"}`}
                             >
                                 Proyección
                             </button>
@@ -178,9 +178,9 @@ export default function SlideFinalInteractive() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-[1fr_260px] lg:grid-cols-[1fr_300px] gap-4 md:gap-6 lg:gap-8 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-[1fr_240px] lg:grid-cols-[1fr_280px] gap-3 md:gap-5 lg:gap-6 items-center">
                     {/* Chart Area */}
-                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-4 md:p-6 rounded-2xl h-[350px] md:h-[400px] lg:h-[450px] relative">
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-3 rounded-2xl h-[280px] md:h-[320px] lg:h-[350px] relative">
                         {activeView === "projection" && (
                             <div className="absolute top-6 right-6 z-10 flex gap-2">
                                 <button

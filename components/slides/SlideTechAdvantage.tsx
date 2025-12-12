@@ -54,38 +54,38 @@ export default function SlideTechAdvantage() {
             </div>
 
             <div className="w-full max-w-6xl mx-auto relative z-10 flex flex-col h-full justify-center">
-                <div className="text-center mb-6 md:mb-8 lg:mb-10">
-                    <div className="flex items-center justify-center gap-3 mb-4">
-                        <div className="w-12 md:w-16 h-1 bg-proteo-orange" />
-                        <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-proteo-orange font-bold">Ventaja Operativa</span>
-                        <div className="w-12 md:w-16 h-1 bg-proteo-orange" />
+                <div className="text-center mb-2 md:mb-4 lg:mb-6">
+                    <div className="flex items-center justify-center gap-2 mb-2 md:mb-3">
+                        <div className="w-8 md:w-12 h-1 bg-proteo-orange" />
+                        <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-proteo-orange font-bold">Ventaja Operativa</span>
+                        <div className="w-8 md:w-12 h-1 bg-proteo-orange" />
                     </div>
-                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-proteo-blue mb-3">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-proteo-blue mb-2">
                         Bancos de Aire
                     </h2>
-                    <p className="text-slate-600 text-sm md:text-base lg:text-lg max-w-3xl mx-auto">
+                    <p className="text-slate-600 text-xs md:text-sm lg:text-base max-w-3xl mx-auto">
                         Tecnología que optimiza la ejecución del servicio y elimina puntos de fallo
                     </p>
                 </div>
 
                 {/* Advantages Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 lg:gap-8 xl:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 lg:gap-5">
                     {advantages.map((advantage, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="bg-slate-50 p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl border-l-4 border-transparent hover:border-proteo-orange transition-all group relative overflow-hidden"
+                            className="bg-slate-50 p-3 md:p-4 rounded-xl border-l-4 border-transparent hover:border-proteo-orange transition-all group relative overflow-hidden"
                         >
                             {/* Subtle decorative circle */}
-                            <div className={`absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br ${advantage.color} opacity-5 group-hover:opacity-10 transition-opacity rounded-full blur-2xl`} />
+                            <div className={`absolute -top-8 -right-8 w-20 h-20 bg-gradient-to-br ${advantage.color} opacity-5 group-hover:opacity-10 transition-opacity rounded-full blur-2xl`} />
 
-                            <div className={`w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-gradient-to-br ${advantage.color} flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform relative z-10`}>
-                                <advantage.icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                            <div className={`w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br ${advantage.color} flex items-center justify-center mb-2 group-hover:scale-110 transition-transform relative z-10`}>
+                                <advantage.icon className="w-4 h-4 md:w-5 md:h-5 text-white" />
                             </div>
-                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-slate-800 mb-2 relative z-10">{advantage.title}</h3>
-                            <p className="text-xs md:text-sm lg:text-base text-slate-600 leading-relaxed relative z-10">{advantage.description}</p>
+                            <h3 className="text-base md:text-lg lg:text-xl font-bold text-slate-800 mb-1 relative z-10">{advantage.title}</h3>
+                            <p className="text-[10px] md:text-xs lg:text-sm text-slate-600 leading-relaxed relative z-10">{advantage.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -95,12 +95,12 @@ export default function SlideTechAdvantage() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6, duration: 0.6 }}
-                    className="mt-6 md:mt-8 lg:mt-10 bg-gradient-to-r from-slate-800 via-cyan-900 to-slate-800 p-4 md:p-6 lg:p-8 rounded-xl md:rounded-2xl text-white text-center relative overflow-hidden"
+                    className="mt-3 md:mt-5 lg:mt-6 bg-gradient-to-r from-slate-800 via-cyan-900 to-slate-800 p-3 md:p-4 lg:p-5 rounded-xl text-white text-center relative overflow-hidden"
                 >
                     {/* Decorative background elements */}
                     <div className="absolute inset-0 opacity-10">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-proteo-orange rounded-full blur-3xl" />
-                        <div className="absolute bottom-0 left-0 w-40 h-40 bg-cyan-400 rounded-full blur-3xl" />
+                        <div className="absolute top-0 right-0 w-24 h-24 bg-proteo-orange rounded-full blur-3xl" />
+                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-cyan-400 rounded-full blur-3xl" />
                     </div>
 
                     {/* Subtle pattern overlay */}
@@ -109,7 +109,7 @@ export default function SlideTechAdvantage() {
                         backgroundSize: '32px 32px'
                     }} />
 
-                    <p className="text-sm md:text-base lg:text-lg leading-relaxed max-w-3xl mx-auto relative z-10">
+                    <p className="text-xs md:text-sm lg:text-base leading-relaxed max-w-3xl mx-auto relative z-10">
                         Los Bancos de Aire permiten que nuestro equipo se enfoque en lo importante:
                         el mantenimiento de sus equipos críticos, sin interrupciones técnicas.
                     </p>

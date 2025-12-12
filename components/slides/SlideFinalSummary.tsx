@@ -30,56 +30,56 @@ export default function SlideFinalSummary() {
         <SlideWrapper className="bg-gradient-to-br from-slate-900 via-slate-800 to-proteo-blue">
             <div className="w-full max-w-6xl mx-auto px-4">
                 {/* Header */}
-                <div className="text-center mb-6">
+                <div className="text-center mb-3">
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1">
                             PROTEO CHILE
                         </h1>
-                        <p className="text-lg md:text-xl text-proteo-orange font-bold mb-2">
+                        <p className="text-base md:text-lg lg:text-xl text-proteo-orange font-bold mb-1">
                             Buceo Industrial
                         </p>
-                        <div className="w-20 h-1 bg-proteo-orange mx-auto" />
+                        <div className="w-16 md:w-20 h-1 bg-proteo-orange mx-auto" />
                     </motion.div>
                 </div>
 
                 {/* Metrics Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 mb-4 md:mb-5">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 mb-3">
                     {metrics.map((metric, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ delay: index * 0.08, duration: 0.3 }}
-                            className="bg-white/10 backdrop-blur-sm border border-white/30 p-3 md:p-4 rounded-xl text-center hover:bg-white/15 transition-all"
+                            className="bg-white/10 backdrop-blur-sm border border-white/30 p-2 rounded-xl text-center hover:bg-white/15 transition-all"
                         >
-                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-1 md:mb-2">
-                                <metric.icon className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                            <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-1">
+                                <metric.icon className="w-3 h-3 md:w-4 md:h-4 text-white" />
                             </div>
-                            <h3 className="text-xs md:text-sm font-bold text-white mb-0.5 md:mb-1">{metric.label}</h3>
-                            <p className="text-[10px] md:text-xs text-slate-300">{metric.description}</p>
+                            <h3 className="text-[10px] md:text-xs font-bold text-white mb-0.5">{metric.label}</h3>
+                            <p className="text-[9px] md:text-[10px] text-slate-300">{metric.description}</p>
                         </motion.div>
                     ))}
                 </div>
 
                 {/* Highlights */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-4 md:mb-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 mb-3">
                     {highlights.map((highlight, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
-                            className="bg-white/10 backdrop-blur-sm border border-white/30 p-4 md:p-5 rounded-xl"
+                            className="bg-white/10 backdrop-blur-sm border border-white/30 p-3 rounded-xl"
                         >
-                            <h3 className="text-base md:text-lg font-bold text-proteo-orange mb-2 md:mb-3">{highlight.title}</h3>
-                            <ul className="space-y-1 md:space-y-2">
+                            <h3 className="text-xs md:text-sm lg:text-base font-bold text-proteo-orange mb-1 md:mb-2">{highlight.title}</h3>
+                            <ul className="space-y-1">
                                 {highlight.items.map((item, idx) => (
-                                    <li key={idx} className="flex items-center gap-2 text-xs md:text-sm text-slate-200">
-                                        <div className="w-1.5 h-1.5 bg-proteo-orange rounded-full" />
+                                    <li key={idx} className="flex items-center gap-2 text-[10px] md:text-xs text-slate-200">
+                                        <div className="w-1 h-1 bg-proteo-orange rounded-full" />
                                         <span>{item}</span>
                                     </li>
                                 ))}
@@ -89,15 +89,15 @@ export default function SlideFinalSummary() {
                 </div>
 
                 {/* Value Props */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-4 md:mb-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 mb-3">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.7, duration: 0.4 }}
-                        className="bg-white/10 backdrop-blur-sm border border-white/30 p-4 md:p-5 rounded-xl"
+                        className="bg-white/10 backdrop-blur-sm border border-white/30 p-3 rounded-xl"
                     >
-                        <h3 className="text-sm md:text-base font-bold text-white mb-2 md:mb-3">Plan Preventivo</h3>
-                        <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-slate-200">
+                        <h3 className="text-xs md:text-sm font-bold text-white mb-1 md:mb-2">Plan Preventivo</h3>
+                        <ul className="space-y-1 text-[10px] md:text-xs text-slate-200">
                             <li>• Respuestas más rápida</li>
                             <li>• Descuentos multianuales</li>
                             <li>• Detección temprana</li>
@@ -108,10 +108,10 @@ export default function SlideFinalSummary() {
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.8, duration: 0.4 }}
-                        className="bg-white/10 backdrop-blur-sm border border-white/30 p-4 md:p-5 rounded-xl"
+                        className="bg-white/10 backdrop-blur-sm border border-white/30 p-3 rounded-xl"
                     >
-                        <h3 className="text-sm md:text-base font-bold text-white mb-2 md:mb-3">Diferenciación</h3>
-                        <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-slate-200">
+                        <h3 className="text-xs md:text-sm font-bold text-white mb-1 md:mb-2">Diferenciación</h3>
+                        <ul className="space-y-1 text-[10px] md:text-xs text-slate-200">
                             <li>• Tecnología única en Chile</li>
                             <li>• Nitrox para productividad</li>
                             <li>• ISO 9001, 14001, 45001 en proceso</li>
@@ -124,9 +124,9 @@ export default function SlideFinalSummary() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1, duration: 0.5 }}
-                    className="text-center border-t border-white/20 pt-4"
+                    className="text-center border-t border-white/20 pt-2"
                 >
-                    <p className="text-slate-300 text-base">
+                    <p className="text-slate-300 text-xs md:text-sm">
                         Continuidad operacional con excelencia técnica
                     </p>
                 </motion.div>

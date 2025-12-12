@@ -65,20 +65,20 @@ export default function SlideNitroxResponse() {
 
             <div className="w-full max-w-5xl mx-auto relative z-10">
                 {/* Header with Optional Badge */}
-                <div className="text-center mb-10 md:mb-12">
+                <div className="text-center mb-4 md:mb-6">
                     <motion.div
                         initial={{ scale: 0.8, opacity: 0 }}
                         whileInView={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 0.5 }}
-                        className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full text-sm font-bold mb-6 shadow-lg"
+                        className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-1.5 rounded-full text-xs font-bold mb-3 shadow-lg"
                     >
                         SERVICIO OPCIONAL
                     </motion.div>
 
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-proteo-blue mb-4">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-proteo-blue mb-2">
                         Nitrox (EANx 32-36%)
                     </h2>
-                    <p className="text-slate-600 text-lg max-w-3xl mx-auto">
+                    <p className="text-slate-600 text-sm md:text-base lg:text-lg max-w-3xl mx-auto">
                         Aire enriquecido que optimiza el rendimiento del equipo de buceo
                     </p>
                 </div>
@@ -93,17 +93,17 @@ export default function SlideNitroxResponse() {
                             animate={{ opacity: 1, scale: 1, rotateY: 0 }}
                             exit={{ opacity: 0, scale: 0.8, rotateY: 90 }}
                             transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
-                            className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 mx-auto max-w-2xl"
+                            className="bg-white rounded-2xl shadow-xl p-5 md:p-6 mx-auto max-w-xl"
                         >
-                            <div className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br ${currentCard.color} flex items-center justify-center mx-auto mb-6 shadow-lg`}>
-                                <currentCard.icon className="w-10 h-10 md:w-12 md:h-12 text-white" />
+                            <div className={`w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br ${currentCard.color} flex items-center justify-center mx-auto mb-3 shadow-lg`}>
+                                <currentCard.icon className="w-7 h-7 md:w-8 md:h-8 text-white" />
                             </div>
 
-                            <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4 text-center">
+                            <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-2 text-center">
                                 {currentCard.title}
                             </h3>
 
-                            <p className="text-slate-600 text-center leading-relaxed text-lg">
+                            <p className="text-slate-600 text-center leading-relaxed text-sm md:text-base">
                                 {currentCard.description}
                             </p>
                         </motion.div>
@@ -112,29 +112,29 @@ export default function SlideNitroxResponse() {
                     {/* Navigation Buttons */}
                     <button
                         onClick={prevCard}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-white rounded-full p-3 shadow-lg hover:bg-slate-100 transition-all group"
+                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-10 bg-white rounded-full p-2 shadow-lg hover:bg-slate-100 transition-all group"
                         aria-label="Previous"
                     >
-                        <ChevronLeft className="w-6 h-6 text-slate-600 group-hover:text-proteo-blue" />
+                        <ChevronLeft className="w-5 h-5 text-slate-600 group-hover:text-proteo-blue" />
                     </button>
 
                     <button
                         onClick={nextCard}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-white rounded-full p-3 shadow-lg hover:bg-slate-100 transition-all group"
+                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-10 bg-white rounded-full p-2 shadow-lg hover:bg-slate-100 transition-all group"
                         aria-label="Next"
                     >
-                        <ChevronRight className="w-6 h-6 text-slate-600 group-hover:text-proteo-blue" />
+                        <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-proteo-blue" />
                     </button>
                 </div>
 
                 {/* Dots Indicator */}
-                <div className="flex justify-center gap-2 mt-8">
+                <div className="flex justify-center gap-2 mt-4">
                     {advantages.map((_, index) => (
                         <button
                             key={index}
                             onClick={() => setCurrentIndex(index)}
-                            className={`w-3 h-3 rounded-full transition-all ${index === currentIndex
-                                ? 'bg-proteo-blue w-8'
+                            className={`w-2.5 h-2.5 rounded-full transition-all ${index === currentIndex
+                                ? 'bg-proteo-blue w-6'
                                 : 'bg-slate-300 hover:bg-slate-400'
                                 }`}
                             aria-label={`Go to card ${index + 1}`}
@@ -147,7 +147,7 @@ export default function SlideNitroxResponse() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.6 }}
-                    className="mt-10 bg-gradient-to-r from-slate-800 via-cyan-900 to-slate-800 p-6 md:p-8 rounded-2xl text-white text-center relative overflow-hidden"
+                    className="mt-4 md:mt-6 bg-gradient-to-r from-slate-800 via-cyan-900 to-slate-800 p-4 md:p-5 rounded-xl text-white text-center relative overflow-hidden"
                 >
                     {/* Decorative background elements */}
                     <div className="absolute inset-0 opacity-10">

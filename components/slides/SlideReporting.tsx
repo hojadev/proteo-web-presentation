@@ -25,7 +25,7 @@ export default function SlideReporting() {
                 <Bubbles />
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full max-w-6xl mx-auto relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 items-center w-full max-w-6xl mx-auto relative z-10">
 
                 {/* Left: Content */}
                 <motion.div
@@ -33,47 +33,47 @@ export default function SlideReporting() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <div className="mb-6">
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="w-12 h-1 bg-proteo-orange" />
-                            <span className="text-xs uppercase tracking-[0.3em] text-proteo-orange font-bold">Control Periódico</span>
+                    <div className="mb-4 md:mb-5">
+                        <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
+                            <div className="w-8 md:w-12 h-1 bg-proteo-orange" />
+                            <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] text-proteo-orange font-bold">Control Periódico</span>
                         </div>
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-proteo-blue mb-4">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-proteo-blue mb-2 md:mb-3">
                             Informes Técnicos
                         </h2>
-                        <p className="text-slate-600 text-lg leading-relaxed mb-2">
+                        <p className="text-slate-600 text-sm md:text-base lg:text-lg leading-relaxed mb-1 md:mb-2">
                             Entregamos informes en cada actividad de mantenimiento preventivo ejecutada
                         </p>
                     </div>
 
-                    <div className="space-y-4">
-                        <div className="flex items-start gap-4">
-                            <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
-                                <Calendar className="w-5 h-5 text-blue-600" />
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
+                        <div className="flex md:flex-col items-start md:items-center text-left md:text-center gap-3 md:gap-2">
+                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+                                <Calendar className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
                             </div>
                             <div>
-                                <h3 className="font-bold text-slate-800 mb-1">Seguimiento de Schedule</h3>
-                                <p className="text-sm text-slate-600">Evidencia de cumplimiento del plan preventivo</p>
+                                <h3 className="text-sm md:text-xs lg:text-sm font-bold text-slate-800 mb-0.5 md:mb-1">Seguimiento</h3>
+                                <p className="text-xs md:text-[10px] lg:text-xs text-slate-600 leading-tight">Evidencia de cumplimiento del plan preventivo</p>
                             </div>
                         </div>
 
-                        <div className="flex items-start gap-4">
-                            <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
-                                <TrendingUp className="w-5 h-5 text-green-600" />
+                        <div className="flex md:flex-col items-start md:items-center text-left md:text-center gap-3 md:gap-2">
+                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                                <TrendingUp className="w-4 h-4 md:w-5 md:h-5 text-green-600" />
                             </div>
                             <div>
-                                <h3 className="font-bold text-slate-800 mb-1">Análisis de Tendencias</h3>
-                                <p className="text-sm text-slate-600">Detecta patrones antes de que se conviertan en fallas</p>
+                                <h3 className="text-sm md:text-xs lg:text-sm font-bold text-slate-800 mb-0.5 md:mb-1">Tendencias</h3>
+                                <p className="text-xs md:text-[10px] lg:text-xs text-slate-600 leading-tight">Detecta patrones antes de que se conviertan en fallas</p>
                             </div>
                         </div>
 
-                        <div className="flex items-start gap-4">
-                            <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0">
-                                <Shield className="w-5 h-5 text-purple-600" />
+                        <div className="flex md:flex-col items-start md:items-center text-left md:text-center gap-3 md:gap-2">
+                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0">
+                                <Shield className="w-4 h-4 md:w-5 md:h-5 text-purple-600" />
                             </div>
                             <div>
-                                <h3 className="font-bold text-slate-800 mb-1">Trazabilidad Total</h3>
-                                <p className="text-sm text-slate-600">Documentación para auditorías ISO y SMA (Superintendencia del Medio Ambiente)</p>
+                                <h3 className="text-sm md:text-xs lg:text-sm font-bold text-slate-800 mb-0.5 md:mb-1">Trazabilidad</h3>
+                                <p className="text-xs md:text-[10px] lg:text-xs text-slate-600 leading-tight">Documentación para auditorías ISO y SMA</p>
                             </div>
                         </div>
                     </div>
@@ -87,44 +87,44 @@ export default function SlideReporting() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
                     {/* Stack of Reports */}
-                    <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-72 h-96 bg-slate-200 rounded-lg shadow-lg rotate-6" />
-                    <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-72 h-96 bg-slate-100 rounded-lg shadow-lg -rotate-3" />
+                    <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-56 md:w-64 h-72 md:h-80 bg-slate-200 rounded-lg shadow-lg rotate-6" />
+                    <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-56 md:w-64 h-72 md:h-80 bg-slate-100 rounded-lg shadow-lg -rotate-3" />
 
                     {/* Main Report */}
-                    <div className="relative w-72 h-96 bg-white rounded-lg shadow-2xl p-6 border border-slate-200 flex flex-col">
+                    <div className="relative w-56 md:w-64 h-72 md:h-80 bg-white rounded-lg shadow-2xl p-4 md:p-5 border border-slate-200 flex flex-col">
                         {/* Header */}
-                        <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
-                            <FileText className="w-8 h-8 text-proteo-blue" />
+                        <div className="flex items-center gap-2 md:gap-3 mb-4 pb-3 border-b border-slate-100">
+                            <FileText className="w-6 h-6 md:w-8 md:h-8 text-proteo-blue" />
                             <div className="flex-1">
-                                <div className="h-2 w-32 bg-slate-200 rounded-full mb-2" />
-                                <div className="h-1.5 w-20 bg-slate-100 rounded-full" />
+                                <div className="h-1.5 md:h-2 w-24 md:w-32 bg-slate-200 rounded-full mb-1.5 md:mb-2" />
+                                <div className="h-1 md:h-1.5 w-16 md:w-20 bg-slate-100 rounded-full" />
                             </div>
                         </div>
 
                         {/* Content Lines */}
-                        <div className="space-y-4 mb-auto">
+                        <div className="space-y-3 mb-auto">
                             <div>
-                                <div className="h-1.5 w-24 bg-blue-200 rounded-full mb-2" />
-                                <div className="h-2 w-full bg-slate-100 rounded-full" />
-                                <div className="h-2 w-full bg-slate-100 rounded-full" />
-                                <div className="h-2 w-3/4 bg-slate-100 rounded-full" />
+                                <div className="h-1 md:h-1.5 w-20 bg-blue-200 rounded-full mb-1.5" />
+                                <div className="h-1.5 md:h-2 w-full bg-slate-100 rounded-full" />
+                                <div className="h-1.5 md:h-2 w-full bg-slate-100 rounded-full" />
+                                <div className="h-1.5 md:h-2 w-3/4 bg-slate-100 rounded-full" />
                             </div>
                             <div>
-                                <div className="h-1.5 w-24 bg-green-200 rounded-full mb-2" />
-                                <div className="h-2 w-full bg-slate-100 rounded-full" />
-                                <div className="h-2 w-5/6 bg-slate-100 rounded-full" />
+                                <div className="h-1 md:h-1.5 w-20 bg-green-200 rounded-full mb-1.5" />
+                                <div className="h-1.5 md:h-2 w-full bg-slate-100 rounded-full" />
+                                <div className="h-1.5 md:h-2 w-5/6 bg-slate-100 rounded-full" />
                             </div>
                         </div>
 
                         {/* Bottom Section */}
-                        <div className="mt-6 pt-6 border-t border-slate-100">
-                            <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                                    <FileText className="w-5 h-5 text-proteo-blue" />
+                        <div className="mt-4 pt-4 border-t border-slate-100">
+                            <div className="flex items-center gap-2 md:gap-3">
+                                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <FileText className="w-4 h-4 md:w-5 md:h-5 text-proteo-blue" />
                                 </div>
                                 <div className="flex-1">
-                                    <p className="text-[10px] text-slate-400 uppercase tracking-wide">Reporte Técnico</p>
-                                    <p className="text-xs font-bold text-proteo-blue">Detallado y Trazable</p>
+                                    <p className="text-[8px] md:text-[10px] text-slate-400 uppercase tracking-wide">Reporte Técnico</p>
+                                    <p className="text-[10px] md:text-xs font-bold text-proteo-blue">Detallado y Trazable</p>
                                 </div>
                             </div>
                         </div>
