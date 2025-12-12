@@ -66,7 +66,7 @@ export default function SlideExperience() {
                 </motion.div>
 
                 {/* Right: Grid of Benefits (2 columns) */}
-                <div className="lg:col-span-2 grid grid-cols-1 gap-4 md:gap-6">
+                <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-4 md:gap-6">
                     <motion.div
                         className="bg-slate-50 p-5 md:p-6 rounded-xl border-l-4 border-proteo-blue hover:shadow-lg transition-all group"
                         initial={{ opacity: 0, x: 50 }}

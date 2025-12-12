@@ -22,7 +22,7 @@ export default function SlideHero() {
                 <div className="absolute top-0 left-3/4 w-px h-full bg-white rotate-12" />
             </div>
 
-            <div className="relative z-10 max-w-5xl w-full">
+            <div className="relative z-10 max-w-5xl w-full px-4 md:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export default function SlideHero() {
                             Proteo Industrial Diving
                         </h2>
                     </div>
-                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold leading-[1.1] mb-6 md:mb-8 tracking-tight">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] mb-6 md:mb-8 tracking-tight">
                         Buceo Industrial para la <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-proteo-accent to-blue-300">
                             Continuidad de su <br className="hidden md:block" />Ecosistema Hídrico

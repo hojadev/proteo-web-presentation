@@ -12,7 +12,7 @@ export default function SlideWrapper({ children, className, id }: SlideWrapperPr
         <section
             id={id}
             className={cn(
-                "w-full flex flex-col justify-center items-center px-8 md:px-20 lg:px-32 py-16 relative overflow-hidden",
+                "w-full flex flex-col justify-center items-center px-4 md:px-12 lg:px-32 py-8 md:py-12 lg:py-16 relative overflow-hidden",
                 "min-h-[100dvh] md:h-[100dvh]",
                 className
             )}

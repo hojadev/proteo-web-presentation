@@ -150,7 +150,7 @@ export default function SlideFinalInteractive() {
                         </span>
                         <div className="w-12 h-1 bg-proteo-orange" />
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
                         {activeView === "daily" ? "Comparativa Planes" : "Valor en el Tiempo"}
                     </h2>
 
@@ -178,16 +178,16 @@ export default function SlideFinalInteractive() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-[1fr_260px] lg:grid-cols-[1fr_300px] gap-4 md:gap-6 lg:gap-8 items-center">
                     {/* Chart Area */}
-                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl h-[450px] relative">
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-4 md:p-6 rounded-2xl h-[350px] md:h-[400px] lg:h-[450px] relative">
                         {activeView === "projection" && (
                             <div className="absolute top-6 right-6 z-10 flex gap-2">
                                 <button
                                     onClick={() => setProjectionPeriod("12")}
                                     className={`px-3 py-1 rounded-lg text-xs font-bold transition-colors border ${projectionPeriod === "12"
-                                            ? "bg-proteo-blue border-proteo-blue text-white"
-                                            : "bg-transparent border-slate-600 text-slate-400 hover:border-slate-400"
+                                        ? "bg-proteo-blue border-proteo-blue text-white"
+                                        : "bg-transparent border-slate-600 text-slate-400 hover:border-slate-400"
                                         }`}
                                 >
                                     1 Año
@@ -195,8 +195,8 @@ export default function SlideFinalInteractive() {
                                 <button
                                     onClick={() => setProjectionPeriod("36")}
                                     className={`px-3 py-1 rounded-lg text-xs font-bold transition-colors border ${projectionPeriod === "36"
-                                            ? "bg-proteo-blue border-proteo-blue text-white"
-                                            : "bg-transparent border-slate-600 text-slate-400 hover:border-slate-400"
+                                        ? "bg-proteo-blue border-proteo-blue text-white"
+                                        : "bg-transparent border-slate-600 text-slate-400 hover:border-slate-400"
                                         }`}
                                 >
                                     3 Años
@@ -204,8 +204,8 @@ export default function SlideFinalInteractive() {
                                 <button
                                     onClick={() => setProjectionPeriod("60")}
                                     className={`px-3 py-1 rounded-lg text-xs font-bold transition-colors border ${projectionPeriod === "60"
-                                            ? "bg-proteo-blue border-proteo-blue text-white"
-                                            : "bg-transparent border-slate-600 text-slate-400 hover:border-slate-400"
+                                        ? "bg-proteo-blue border-proteo-blue text-white"
+                                        : "bg-transparent border-slate-600 text-slate-400 hover:border-slate-400"
                                         }`}
                                 >
                                     5 Años
